@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliações do Produto</title>
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link para a biblioteca Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Produto X - Avaliações</h1>
+    <div id="review-form">
+      <h2>Deixe sua Avaliação</h2>
+      <!-- Formulário para adicionar uma nova avaliação -->
+      <form id="add-review-form">
+        <label for="rating">Nota (de 1 a 5 estrelas):</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+        <label for="comment">Comentário:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <button type="submit">Enviar Avaliação</button>
+      </form>
+    </div>
+    <div id="reviews-list">
+      <h2>Avaliações Anteriores</h2>
+      <!-- Filtro para as avaliações -->
+      <label for="filter">Filtrar por classificação:</label>
+      <select id="filter">
+        <option value="0">Mostrar todas as avaliações</option>
+        <option value="5">5 estrelas</option>
+        <option value="4">4 estrelas ou mais</option>
+        <option value="3">3 estrelas ou mais</option>
+        <option value="2">2 estrelas ou mais</option>
+        <option value="1">1 estrela ou mais</option>
+      </select>
+      <!-- Lista de avaliações -->
+      <ul id="reviews"></ul>
+      <!-- Paginação das avaliações -->
+      <div id="pagination">
+        <button id="prev-page">Página Anterior</button>
+        <button id="next-page">Próxima Página</button>
+        <p>Total de Avaliações: <span id="total-reviews">0</span></p>
+      </div>
+    </div>
+    <!-- Ícones de redes sociais -->
+    <div id="social-icons">
+      <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
